@@ -1,4 +1,4 @@
-print('Hola mundo!')
+print('Hola mundo')
 
 import numpy as np
 
