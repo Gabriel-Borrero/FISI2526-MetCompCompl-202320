@@ -17,4 +17,4 @@ class EventoSismico:
     def agencia_SGC(self) -> bool:
         return self.agencia == 'SGC'
     
-    holis = 0
+    
