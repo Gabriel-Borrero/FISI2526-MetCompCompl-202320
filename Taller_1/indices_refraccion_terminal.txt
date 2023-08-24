@@ -1,0 +1,6 @@
+ #Punto 1.1.
+ touch materiales.txt
+ awk -F "," '{print $3}' indices_refraccion.csv > materiales.txt 
+
+ #Punto 1.2. 
+ 
