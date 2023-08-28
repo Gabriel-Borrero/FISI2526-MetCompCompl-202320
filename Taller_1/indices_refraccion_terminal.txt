@@ -11,7 +11,7 @@ cd Taller_1/
 mkdir Vidrio
 cd Vidrio 
 touch archivos_para_dercargar_yml.txt
-cd Taller_1/
+cd ..
 awk -F "," '{if($1==Vidrio)print $4}' indices_refraccion.csv > archivos_para_dercargar_yml.txt 
 cd Vidrio
 wget -i archivos_para_dercargar_yml.txt 
@@ -20,10 +20,38 @@ wget -i archivos_para_dercargar_yml.txt
 #Materia Inorgánica: 
 
 cd Taller_1/
-mkdir Materia Inorgánica
+mkdir Materia_Inorgánica
 cd Materia Inorgánica 
 touch archivos_para_dercargar_yml.txt
-cd Taller_1/
-awk -F "," '{if($1==Vidrio)print $4}' indices_refraccion.csv > Materia_Inorgánica/archivos_para_dercargar_yml.txt 
+cd ..
+awk -F "," '{if($1=="Materia Inorgánica")print $4}' indices_refraccion.csv > Materia_Inorgánica/archivos_para_dercargar_yml.txt 
 cd Materia_Inorgánica
 wget -i archivos_para_dercargar_yml.txt 
+
+
+#Materia Orgánica:
+
+cd Taller_1/
+mkdir Materia_Orgánica
+cd Materia_Orgánica 
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Materia_Orgánica")print $4}' indices_refraccion.csv > Materia_Orgánica/archivos_para_dercargar_yml.txt 
+cd Materia_Orgánica
+wget -i archivos_para_dercargar_yml.txt 
+
+
+#Plásticos Comerciales:
+
+cd Taller_1/
+mkdir Plásticos_Comerciales
+cd Plásticos_Comerciales
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Materia_Orgánica")print $4}' indices_refraccion.csv > Materia_Orgánica/archivos_para_dercargar_yml.txt 
+cd Materia_Orgánica
+wget -i archivos_para_dercargar_yml.txt 
+
+
+
+
