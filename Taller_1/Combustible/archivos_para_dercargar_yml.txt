@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/master/database/data-nk/other/fuel/biodisel/Wang-20C.yml
