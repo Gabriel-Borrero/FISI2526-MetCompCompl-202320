@@ -53,5 +53,52 @@ cd Materia_Orgánica
 wget -i archivos_para_dercargar_yml.txt 
 
 
+#Exotico:
+
+cd Taller_1/
+mkdir Exotico
+cd Exotico
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Exotico")print $4}' indices_refraccion.csv > Exotico/archivos_para_dercargar_yml.txt 
+cd Exotico
+wget -i archivos_para_dercargar_yml.txt 
+
+
+#Combustible:
+
+cd Taller_1/
+mkdir Combustible
+cd Combustible
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Combustible")print $4}' indices_refraccion.csv > Combustible/archivos_para_dercargar_yml.txt 
+cd Combustible
+wget -i archivos_para_dercargar_yml.txt 
+
+
+#Mezclas:
+
+cd Taller_1/
+mkdir Mezclas
+cd Mezclas
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Mezclas")print $4}' indices_refraccion.csv > Mezclas/archivos_para_dercargar_yml.txt 
+cd Mezclas
+wget -i archivos_para_dercargar_yml.txt 
+
+
+#Adhesivos Ópticos:
+
+cd Taller_1/
+mkdir Adhesivos_Ópticos
+cd Adhesivos_Ópticos
+touch archivos_para_dercargar_yml.txt
+cd ..
+awk -F "," '{if($1=="Adhesivos Ópticos")print $4}' indices_refraccion.csv > Adhesivos_Ópticos/archivos_para_dercargar_yml.txt 
+cd Adhesivos_Ópticos
+wget -i archivos_para_dercargar_yml.txt 
+
 
 
