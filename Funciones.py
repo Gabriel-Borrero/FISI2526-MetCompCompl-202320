@@ -47,3 +47,22 @@ def DerivadaCentral(f,x,h):
         d = (f(x+h) - f(x-h))/(2*h)
         
     return d
+
+ list=[]
+        for i in contenido:
+            list.append(i)
+            
+        for i in list:
+            if i == '    data: |\n':
+                x=list.index(i)
+                del list[0:x+1]
+                
+                
+#definitiva
+
+   while final==False:    
+            for i in y:
+                if i == ['data: |']:   
+                    x=y.index(i)
+                    del y[0:x+1]
+            final=True
