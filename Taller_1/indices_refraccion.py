@@ -1,4 +1,5 @@
 #Punto 1.3.
+
 import matplotlib.pyplot as plt
 import numpy as np
 def tuplas_archivos_yml(ruta_de_archivo):
@@ -14,8 +15,6 @@ def tuplas_archivos_yml(ruta_de_archivo):
             
         for i in range(len((list))):
                 y.append(list[i].strip().split(","))
-                
-        print(y)
             
         del y[0:9] 
           
@@ -33,9 +32,6 @@ def tuplas_archivos_yml(ruta_de_archivo):
                     x=y.index(i)
                     y=y[:x]
         
-                
-        
-      
     for listas in y:
         for cadena in listas:
             valores = cadena.split(" ") 
@@ -46,16 +42,13 @@ def tuplas_archivos_yml(ruta_de_archivo):
                  tupla = (valor1, valor2)    
                  tuplas.append(tupla)
                 except ValueError:
-                    print(f"Error al convertir valores en la cadena: {cadena}")
-
-   
-            
-                  
+                    print(f"Error al convertir valores en la cadena: {cadena}")              
     return tuplas
 
 print(tuplas_archivos_yml('C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Adhesivos_Ópticos\\Iezzi.yml.1'))
 
-print("-----------------------------------------------------------------------------------")
+
+
 #Punto 1.4.
 
 def graficos(funcion, ruta_1, ruta_2):
@@ -97,13 +90,13 @@ def graficos(funcion, ruta_1, ruta_2):
             promedio_na+=ya
             
     promedio_na=promedio_na/i 
-    print(i)
     valores_ya = [tupla[1] for tupla in funcion]  
     desviacion_estandara = np.std(valores_ya)
   
     axs.set_ylabel(r'Índice de refracción n(i)')
     axs.set_xlabel('Longitud de onda λ(i)')
     axs.set_title('Longitud de onda λ(i) vs Índice de refracción n(i). \nPromedio ni: ' + str(promedio_na)+ " \nDesviación Estandar: " + str(desviacion_estandara))
+    plt.show()
     
     return None
 
@@ -111,8 +104,9 @@ ruta_1='C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Plás
 ruta_2="C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Adhesivos_Ópticos\\Iezzi.yml.1"
 print(graficos(tuplas_archivos_yml,ruta_1,ruta_2))
 
-#punto 1.5.
 
+
+#punto 1.5.
 
 def general_graficos(funcion):
     
