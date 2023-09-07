@@ -90,6 +90,7 @@ def graficos(funcion, ruta_1, ruta_2):
             promedio_na+=ya
             
     promedio_na=promedio_na/i 
+
     valores_ya = [tupla[1] for tupla in funcion]  
     desviacion_estandara = np.std(valores_ya)
   
@@ -110,13 +111,19 @@ print(graficos(tuplas_archivos_yml,ruta_1,ruta_2))
 
 def general_graficos(funcion):
     
-    
+    promedio_n=0
+    for i in range(len(funcion)):
+            y=funcion[i][1]
+            promedio_n+=y
+            
+    promedio_n=promedio_n/i  
+          
     valores_x = [tupla[0] for tupla in funcion]
     valores_y = [tupla[1] for tupla in funcion]
     
-    plt.scatter(valores_x, valores_y)
-    plt.xlabel("Eje X")
-    plt.ylabel("Eje Y")
-    plt.title("Gráfico de dispersión de tuplas")
-    plt.show()
+    desviacion_estandar = np.std(valores_y)
+    fig,axs = plt.subplots(nrows=1,ncols=1,figsize=(18,4.5))
+    axs.set_ylabel(r'Índice de refracción n(i)')
+    axs.set_xlabel('Longitud de onda λ(i)')
+    axs.set_title('Longitud de onda λ(i) vs Índice de refracción n(i). \nPromedio ni: ' + str(promedio_n)+ " \nDesviación Estandar: " + str(desviacion_estandar))
 
