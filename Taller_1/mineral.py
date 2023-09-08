@@ -36,4 +36,4 @@ mineral1 = Mineral('sulfur',2,True,'#7a785a','Mg3Si4O10(OH)2','NO METÁLICO',2.1
 
 #print(mineral1.es_silicato())
 #print(mineral1.densidad())
-print(mineral1.visualizar_color())
+#print(mineral1.visualizar_color())
