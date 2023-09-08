@@ -5,8 +5,9 @@ import sympy as sym
 import math
 
 class ExpansionTermicaMineral(Mineral):
-    def __init__(self, nombre, dureza, rompimiento_por_fractura, color, composición, lustre, specific_gravity, sistema_cristalino):
-        super().__init__(nombre, dureza, rompimiento_por_fractura, color, composición, lustre, specific_gravity, sistema_cristalino)
+    def __init__(self, archivo):
+        super().__init__()
+        self.archivo = archivo
 
     def abrir_archivo (self,archivo_csv):
         temperatura=[]
@@ -54,7 +55,7 @@ class ExpansionTermicaMineral(Mineral):
                 coeficientes.append(coeficiente_a)
 
         #Cálculo del error
-        #error=np.std(coeficientes)/math.sqrt(len(temperatura))
+        error=np.std(coeficientes)/math.sqrt(len(temperatura))
 
         #Gráficas
         fig,axs = plt.subplots(nrows=1,ncols=2,figsize=(18,4.5))
@@ -72,8 +73,9 @@ class ExpansionTermicaMineral(Mineral):
 
 
         
-        return fig #coeficientes, error
+        return coeficientes, error
 
-mineral1 = ExpansionTermicaMineral('sulfur',2,True,'#7a785a','Mg3Si4O10(OH)2','NO METÁLICO',2.1,'ORTORRÓMBICO')
+#mineral1 = ExpansionTermicaMineral('sulfur',2,True,'#7a785a','Mg3Si4O10(OH)2','NO METÁLICO',2.1,'ORTORRÓMBICO')
 #print(mineral1.abrir_archivo('olivine_angel_2017.csv'))
-print(mineral1.coef_expansión_termica('olivine_angel_2017.csv'))
+#mineral1=ExpansionTermicaMineral(archivo)
+#print(mineral1.coef_expansión_termica('olivine_angel_2017.csv'))
