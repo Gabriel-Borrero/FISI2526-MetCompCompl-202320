@@ -45,7 +45,8 @@ def tuplas_archivos_yml(ruta_de_archivo):
                     print(f"Error al convertir valores en la cadena: {cadena}")              
     return tuplas
 
-#print(tuplas_archivos_yml('C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Adhesivos_Ópticos\\Iezzi.yml.1'))
+#Función de prueba:
+print(tuplas_archivos_yml('C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Adhesivos_Ópticos\\Iezzi.yml.1'))
 
 
 
@@ -116,6 +117,7 @@ def general_graficos(funcion, ruta_de_archivo):
      contenido = archivo.readlines()
      
      for i in contenido[1:]:
+            promedio_na=0
             ruta_primordial="C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\"
             conector="\\"
             
@@ -129,14 +131,18 @@ def general_graficos(funcion, ruta_de_archivo):
                  material="Materia_Orgánica" 
             if  material=="PlÃ¡sticos Comerciales":
                  material="Plásticos_Comerciales"
+            if  material=="Adhesivos Ã“pticos":
+                material="Adhesivos_ópticos"
+                    
             nombre_2=i.split(",")
             nombre_2=nombre_2[2]
     
-            
             try: 
                 
                 ruta_específica=ruta_primordial+material+conector+nombre_2+".yml"
                 funcion=tuplas_archivos_yml(ruta_específica)
+                
+                
             except:
                 print("cargando")
             
@@ -147,7 +153,7 @@ def general_graficos(funcion, ruta_de_archivo):
     
             desviacion_estandar = np.std(valores_y)
             fig,axs = plt.subplots(nrows=1,ncols=1,figsize=(18,7))
-            promedio_na=0
+            
             for i in range(len(funcion)):
             
                 ya=funcion[i][1]
