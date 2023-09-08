@@ -77,5 +77,3 @@ class ExpansionTermicaMineral(Mineral):
         
         return coeficientes#, error
 
-#mineral1 = ExpansionTermicaMineral('sulfur',2,True,'#7a785a','Mg3Si4O10(OH)2','NO METÁLICO',2.1,'ORTORRÓMBICO')
-#print(mineral1.coef_expansión_termica('olivine_angel_2017.csv'))
