@@ -119,15 +119,19 @@ def general_graficos(funcion, ruta_de_archivo):
             ruta_primordial="C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\"
             conector="\\"
             
-                
+              
             material=i.split(",")
             material=material[0]
             
-            
+            if  material=="Materia InorgÃ¡nica":
+                 material="Materia_Inorgánica" 
+            if  material=="Materia OrgÃ¡nica":
+                 material="Materia_Orgánica" 
+            if  material=="PlÃ¡sticos Comerciales":
+                 material="Plásticos_Comerciales"
             nombre_2=i.split(",")
             nombre_2=nombre_2[2]
-            if nombre_2=="Materia InorgÃ¡nica":
-                nombre_2="Materia_Inorgánica"
+    
             
             try: 
                 
@@ -157,8 +161,7 @@ def general_graficos(funcion, ruta_de_archivo):
             axs.set_title('Longitud de onda λ(i) vs Índice de refracción n(i). \nPromedio ni: ' + str(promedio_na)+ " \nDesviación Estandar: " + str(desviacion_estandar))
             ruta_específica=ruta_primordial+material+conector+nombre_2+".png"
             plt.savefig(ruta_específica)
-            
-            plt.close()
+            plt.close("all")
            
         
             
