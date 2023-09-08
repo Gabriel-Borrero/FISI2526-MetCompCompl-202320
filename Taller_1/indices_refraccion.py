@@ -104,7 +104,7 @@ def graficos(funcion, ruta_1, ruta_2):
 
 ruta_1='C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Plásticos_Comerciales\\French.yml'
 ruta_2="C:\\Users\\gaboe\\Desktop\\FISI2526-MetCompCompl-202320\\Taller_1\\Adhesivos_Ópticos\\Iezzi.yml.1"
-#print(graficos(tuplas_archivos_yml,ruta_1,ruta_2))
+print(graficos(tuplas_archivos_yml,ruta_1,ruta_2))
 
 
 
